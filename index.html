@@ -45,10 +45,109 @@
     background: var(--bg);
     color: var(--text);
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
     font-size: 14px;
     line-height: 1.5;
   }
+  body.app-open { overflow: hidden; }
+
+  /* MARKETING HOME */
+  #marketing-home {
+    min-height: 100vh;
+    background:
+      radial-gradient(1200px 520px at 20% -8%, rgba(24,119,242,.12), transparent 60%),
+      radial-gradient(1000px 460px at 80% -20%, rgba(20,128,74,.10), transparent 62%),
+      #f4f6fb;
+    color: #142236;
+  }
+  .mh-wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .mh-nav {
+    height: 74px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .mh-brand { display: flex; align-items: center; gap: 10px; }
+  .mh-brand .logo-mark { width: 38px; height: 38px; font-size: 16px; }
+  .mh-brand .logo-text { font-size: 30px; }
+  .mh-nav-actions { display: flex; align-items: center; gap: 10px; }
+
+  .mh-hero {
+    padding: 42px 0 28px;
+    display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px;
+    align-items: center;
+  }
+  .mh-kicker {
+    display: inline-block; font-size: 11px; letter-spacing: .8px; text-transform: uppercase;
+    color: #2f5fa8; background: #e8f1ff; border: 1px solid #cfe1ff;
+    border-radius: 999px; padding: 6px 10px; margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .mh-title {
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.03;
+    letter-spacing: -.03em;
+    margin-bottom: 12px;
+    color: #0e1d33;
+  }
+  .mh-sub {
+    max-width: 62ch; color: #4f5f74; font-size: 16px; line-height: 1.6; margin-bottom: 18px;
+  }
+  .mh-hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .mh-proof { margin-top: 12px; color: #6b7a8f; font-size: 12px; }
+  .mh-hero-card {
+    background: #fff; border: 1px solid #d8e1ef; border-radius: 16px; padding: 16px;
+    box-shadow: 0 14px 34px rgba(15,23,42,.08);
+  }
+  .mh-mini-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 0; border-bottom: 1px solid #eef3fb;
+  }
+  .mh-mini-row:last-child { border-bottom: none; }
+  .mh-mini-lbl { color: #5d6e85; font-size: 12px; }
+  .mh-mini-val { color: #10253e; font-weight: 700; }
+
+  .mh-logo-strip {
+    background: #fff; border: 1px solid #dfe7f3; border-radius: 14px;
+    padding: 12px 14px; margin: 4px 0 22px;
+  }
+  .mh-logo-title { color: #7b8798; font-size: 11px; text-transform: uppercase; letter-spacing: .7px; margin-bottom: 9px; font-weight: 700; }
+  .mh-logos { display: flex; flex-wrap: wrap; gap: 8px; }
+  .mh-logo-chip {
+    border: 1px solid #e2e8f2; border-radius: 999px; padding: 6px 10px;
+    background: #f8fafd; color: #445367; font-size: 12px; font-weight: 600;
+  }
+
+  .mh-grid {
+    display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px;
+    margin-bottom: 14px;
+  }
+  .mh-card {
+    background: #fff; border: 1px solid #dfe6f2; border-radius: 14px; padding: 16px;
+  }
+  .mh-card h3 { font-size: 16px; color: #0f2239; margin-bottom: 6px; }
+  .mh-card p { color: #5a6b80; font-size: 13px; line-height: 1.55; }
+
+  .mh-steps {
+    background: #fff; border: 1px solid #dce4f1; border-radius: 14px; padding: 16px; margin-bottom: 24px;
+    display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px;
+  }
+  .mh-step {
+    border: 1px solid #e7edf7; border-radius: 12px; background: #f9fbff; padding: 12px;
+  }
+  .mh-step-num {
+    width: 24px; height: 24px; border-radius: 999px;
+    background: #e6f0ff; color: #155ec4; display: inline-flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 800; margin-bottom: 7px;
+  }
+  .mh-step h4 { font-size: 13px; color: #12263e; margin-bottom: 4px; }
+  .mh-step p { font-size: 12px; color: #617388; line-height: 1.45; }
+
+  .mh-bottom-cta {
+    background: linear-gradient(140deg,#e9f1ff,#eef8ff);
+    border: 1px solid #cfe0fb; border-radius: 16px; padding: 18px;
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px;
+  }
+  .mh-bottom-cta h3 { font-size: 22px; color: #122845; }
+  .mh-bottom-cta p { color: #4c6078; font-size: 13px; margin-top: 4px; }
+
 
   /* ── AUTH SCREEN ── */
   #auth-screen {
@@ -135,7 +234,7 @@
   .auth-error { background: var(--red-bg); border: 1px solid rgba(255,77,106,.2); border-radius: 8px; padding: 10px 14px; color: var(--red); font-size: 13px; margin-bottom: 16px; display: none; }
 
   /* ── APP SHELL ── */
-  #app { display: flex; height: 100vh; }
+  #app { display: none; height: 100vh; }
 
   /* ── SIDEBAR ── */
   .sidebar {
@@ -842,6 +941,9 @@
     .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .grid-3,
     .grid-2 { grid-template-columns: 1fr; }
+    .mh-hero { grid-template-columns: 1fr; }
+    .mh-grid { grid-template-columns: 1fr 1fr; }
+    .mh-steps { grid-template-columns: 1fr 1fr; }
   }
 
   @media (max-width: 860px) {
@@ -877,6 +979,13 @@
     .search-bar input { width: 120px; }
     .content { padding: 12px; }
     .stats-grid { grid-template-columns: 1fr; }
+    .mh-wrap { padding: 0 12px; }
+    .mh-nav { height: auto; padding: 12px 0; align-items: flex-start; gap: 10px; flex-direction: column; }
+    .mh-nav-actions { width: 100%; }
+    .mh-nav-actions .btn { flex: 1; }
+    .mh-grid { grid-template-columns: 1fr; }
+    .mh-steps { grid-template-columns: 1fr; }
+    .mh-bottom-cta { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
@@ -894,6 +1003,118 @@ const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
 </script>
 
 <!-- ── AUTH SCREEN ── -->
+<!-- MARKETING HOME -->
+<div id="marketing-home">
+  <div class="mh-wrap">
+    <nav class="mh-nav">
+      <div class="mh-brand">
+        <div class="logo-mark">MK</div>
+        <div class="logo-text">MK <span>Ads</span></div>
+      </div>
+      <div class="mh-nav-actions">
+        <button class="btn btn-ghost" onclick="openAuthScreen()">Sign In</button>
+        <button class="btn btn-primary" onclick="openAdsManager()">Open Ads Manager</button>
+      </div>
+    </nav>
+
+    <section class="mh-hero">
+      <div>
+        <span class="mh-kicker">Ads For Growth Teams</span>
+        <h1 class="mh-title">Reach more buyers across top ad channels without the platform overload.</h1>
+        <p class="mh-sub">
+          MK Ads helps you launch, test, and scale campaigns across search, social, and short-form video from one place.
+          Start by exploring strategy options, then jump into the Ads Manager only when you are ready.
+        </p>
+        <div class="mh-hero-actions">
+          <button class="btn btn-primary" onclick="openAdsManager()">Try Ads Manager</button>
+          <button class="btn btn-ghost" onclick="startManagedSales()">Use Commission-Only Model</button>
+        </div>
+        <div class="mh-proof">No forced signup to browse. Setup first, account later.</div>
+      </div>
+      <aside class="mh-hero-card">
+        <div class="mh-mini-row">
+          <div class="mh-mini-lbl">Activation Time</div>
+          <div class="mh-mini-val">Under 10 minutes</div>
+        </div>
+        <div class="mh-mini-row">
+          <div class="mh-mini-lbl">Channel Coverage</div>
+          <div class="mh-mini-val">Meta, Google, TikTok, Reddit, Snap</div>
+        </div>
+        <div class="mh-mini-row">
+          <div class="mh-mini-lbl">Commercial Models</div>
+          <div class="mh-mini-val">Budget-based or commission-only</div>
+        </div>
+        <div class="mh-mini-row">
+          <div class="mh-mini-lbl">Who Controls Checkout</div>
+          <div class="mh-mini-val">You or MK Managed Sales</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="mh-logo-strip">
+      <div class="mh-logo-title">Inspired by modern ad platform patterns</div>
+      <div class="mh-logos">
+        <span class="mh-logo-chip">Google Ads</span>
+        <span class="mh-logo-chip">Meta Ads</span>
+        <span class="mh-logo-chip">Reddit Ads</span>
+        <span class="mh-logo-chip">Snapchat Ads</span>
+        <span class="mh-logo-chip">TikTok Ads</span>
+        <span class="mh-logo-chip">Amazon Ads</span>
+      </div>
+    </section>
+
+    <section class="mh-grid">
+      <article class="mh-card">
+        <h3>Plan Before You Commit</h3>
+        <p>Browse objectives, placements, audiences, and billing models first. You can explore the full workflow before creating an account.</p>
+      </article>
+      <article class="mh-card">
+        <h3>Commission-Only Option</h3>
+        <p>Choose MK Managed Sales when you want a marketplace model: MK promotes listings and charges commission only on completed sales.</p>
+      </article>
+      <article class="mh-card">
+        <h3>Manager When Ready</h3>
+        <p>When your team is ready, move straight into the Ads Manager to launch campaigns, track performance, and iterate quickly.</p>
+      </article>
+    </section>
+
+    <section class="mh-steps">
+      <div class="mh-step">
+        <span class="mh-step-num">1</span>
+        <h4>Browse Strategy</h4>
+        <p>Review channels, goals, and creative directions without any signup friction.</p>
+      </div>
+      <div class="mh-step">
+        <span class="mh-step-num">2</span>
+        <h4>Pick A Model</h4>
+        <p>Use standard budget bidding or choose commission-only managed sales.</p>
+      </div>
+      <div class="mh-step">
+        <span class="mh-step-num">3</span>
+        <h4>Enter Ads Manager</h4>
+        <p>Open the full manager and configure campaigns when your team is ready.</p>
+      </div>
+      <div class="mh-step">
+        <span class="mh-step-num">4</span>
+        <h4>Scale With Data</h4>
+        <p>Track spend, clicks, and sales outcomes from one dashboard and improve over time.</p>
+      </div>
+    </section>
+
+    <section class="mh-bottom-cta">
+      <div>
+        <h3>Ready to launch campaigns?</h3>
+        <p>Jump into manager now, or start directly in the commission-only sales flow.</p>
+      </div>
+      <div class="mh-hero-actions">
+        <button class="btn btn-primary" onclick="openAdsManager()">Open Ads Manager</button>
+        <button class="btn btn-ghost" onclick="startManagedSales()">Start Managed Sales</button>
+      </div>
+    </section>
+    <div style="height:24px"></div>
+  </div>
+</div>
+
 <div id="auth-screen">
   <div class="auth-card">
     <div class="auth-logo">
@@ -1005,6 +1226,7 @@ const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
     <div class="topbar">
       <div class="topbar-title" id="topbar-title">Dashboard</div>
       <div class="topbar-actions">
+        <button class="btn btn-ghost" onclick="showMarketingHome()">Home</button>
         <div class="search-bar">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           <input type="text" placeholder="Search campaigns…" oninput="searchCampaigns(this.value)">
@@ -1591,12 +1813,10 @@ async function boot() {
     if (session) {
       currentUser = session.user;
       await fetchCampaigns();
-      showApp();
-      return;
     }
   }
-  enterGuestMode();
-  showApp(true);
+  if (!currentUser) enterGuestMode();
+  showMarketingHome();
 }
 
 boot();
@@ -1655,10 +1875,34 @@ function demoLogin() {
 function continueBrowsing() {
   showError('');
   document.getElementById('auth-screen').style.display = 'none';
-  if (!currentUser || currentUser.id !== 'demo') {
-    enterGuestMode(false);
+  if (document.getElementById('app').style.display === 'flex') {
+    if (!currentUser || currentUser.id !== 'demo') enterGuestMode(false);
     showApp(true);
   }
+}
+
+function showMarketingHome() {
+  document.getElementById('auth-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('marketing-home').style.display = 'block';
+  document.body.classList.remove('app-open');
+  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+}
+
+function openAdsManager() {
+  if (!currentUser) enterGuestMode(false);
+  showApp(currentUser?.id === 'demo');
+}
+
+function startManagedSales() {
+  openAdsManager();
+  setTimeout(() => {
+    openCreateModal();
+    currentStep = 2;
+    updateStepUI();
+    document.getElementById('new-bidding').value = 'mk_managed_commission';
+    updateBiddingStrategyUI();
+  }, 0);
 }
 
 function openAuthScreen() {
@@ -1675,7 +1919,9 @@ function showError(msg) {
 
 function showApp(demo=false) {
   document.getElementById('auth-screen').style.display = 'none';
+  document.getElementById('marketing-home').style.display = 'none';
   document.getElementById('app').style.display = 'flex';
+  document.body.classList.add('app-open');
   const isGuest = currentUser?.id === 'demo';
   document.getElementById('demo-banner').style.display = (demo || isGuest) ? 'flex' : 'none';
 
